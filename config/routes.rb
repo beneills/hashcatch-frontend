@@ -1,6 +1,15 @@
 Site::Application.routes.draw do
-  get "users/view"
-  get "welcome/index"
+  root 'welcome#index'
+
+  get 'about' => 'welcome#about'
+
+  # lastly (tant pis pour les utilisateurs qui a des noms malheureux)
+  get ':username' => 'users#view'
+  get 'users/:username' => 'users#view'
+
+
+#  get "welcome/index"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
