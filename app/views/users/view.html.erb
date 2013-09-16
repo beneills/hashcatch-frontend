@@ -1,2 +1,19 @@
 <h1>Users#view</h1>
 <p>Find me in app/views/users/view.html.erb</p>
+
+<h3>User: <%= @user.username %></h3> <%= @r %>
+
+<% @categories.each do |title, entries| %>
+    <h5><%= title.pluralize.capitalize %></h5>
+    <ol>
+      <li><%= entries[1].text %></li>
+      <li><%= entries[2].text %></li>
+      <li><%= entries[3].text %></li>
+    </ol>
+<% end %>
+
+<%= "No data!" if @categories.empty? %>
+
+<br /><br />
+
+<a href="/">back</a>

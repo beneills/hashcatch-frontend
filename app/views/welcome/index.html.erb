@@ -1,2 +1,20 @@
 <h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+
+<ul>
+  <% @users.sort { |x, y| x.username <=> y.username }.each do |u| %>
+  <li><%= link_to "@#{u.username}", "/#{CGI.escape u.username}" %></li> <!-- TODO -->
+  <% end %>
+</ul>
+
+TODO list of most viewed users stuff<br /><br />
+
+Ben Eills, 2013
+
+<%= link_to "About", controller: "welcome", action: "about" %>
+
+<div class="row">
+  <div class="small-2 large-4 columns">one</div>
+  <div class="small-4 large-4 columns">two</div>
+  <div class="small-6 large-4 columns">three</div>
+</div>
+
