@@ -47,3 +47,6 @@ end
 
 # https://github.com/mseri/rails-purecss
 gem 'purecss'
+
+# PostgreSQL
+gem 'pg'

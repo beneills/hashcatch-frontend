@@ -18,8 +18,17 @@ test:
   pool: 5
   timeout: 5000
 
-production:
-  adapter: sqlite3
-  database: db/production.sqlite3
+common: &postgres
+  adapter: postgresql
+  encoding: unicode
+  database: hashcatch
   pool: 5
-  timeout: 5000
+  username: hashcatch
+  password: BfkMwkK7NKBWb81iMDqYUv3vViw7r8
+
+
+production:
+  <<: *postgres
+
+beta:
+  <<: *postgres
