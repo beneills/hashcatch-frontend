@@ -43,3 +43,7 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+
+# https://github.com/mseri/rails-purecss
+gem 'purecss'
