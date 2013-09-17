@@ -1,3 +1,54 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "globals.css.scss";
+
+header {
+    background-color: $blue;
+    text-align: center;
+}
+
+footer {
+    background-color: $blue;
+    text-align: center;
+}
+
+
+header > h1 {
+    $margin-y: 0.1em;
+    display: inline-block;
+    font-size: 5em;
+    margin: {
+	top: $margin-y;
+	bottom: $margin-y;
+    }
+}
+
+
+#index-body {
+    margin: 1em;
+}
+
+#recent-list {
+    list-style: none;
+}
+
+#recent-list li { background-color: green; }
+#recent-list li:nth-child(odd) { background: red; }
+
+#recent-list li {
+    height: 28px;
+}
+
+// Tweet input
+#tweet-body {
+    float: left;
+    height: 28px; // match tweet button
+    width: 50%;
+//    border-bottom-color: #1ab7ea; fade to twitter color TODO
+}
+
+.twitter-hashtag-button {
+    float: right;
+}

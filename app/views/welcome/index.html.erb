@@ -1,20 +1,30 @@
-<h1>HashCatch</h1>
+<header>
+  <h1>HashCatch</h1>
+  <%= link_to "About", controller: "welcome", action: "about" %>
+</header>
 
-<ul>
-  <% @users.sort { |x, y| x.username <=> y.username }.each do |u| %>
-  <li><%= link_to "@#{u.username}", "/#{CGI.escape u.username}" %></li> <!-- TODO -->
-  <% end %>
-</ul>
 
-TODO list of most viewed users stuff<br /><br />
 
-Ben Eills, 2013
 
-<%= link_to "About", controller: "welcome", action: "about" %>
+<div id="index-body">
+  <ul id="recent-list">
+    <li>
+    <form class="pure-form">
+      <div id="tweet-body-expander">
+	<input id="tweet-body" type="text" placeholder="My #1 book is To Kill a Mockingbird">
+      </div>
+      <a href="https://twitter.com/intent/tweet?button_hashtag=hashcatch&text=My%20%231%20book%20is%20To%20Kill%20a%20Mockingbird" class="twitter-hashtag-button" data-size="large" data-related="hashcatch" data-url="http://hashcatch.com">Tweet #hashcatch</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    </form>
+    </li>
 
-<div class="row">
-  <div class="small-2 large-4 columns">one</div>
-  <div class="small-4 large-4 columns">two</div>
-  <div class="small-6 large-4 columns">three</div>
+    <% @users.sort { |x, y| x.username <=> y.username }.each do |u| %>
+    <li><%= link_to "@#{u.username}", "/#{CGI.escape u.username}" %></li> <!-- TODO -->
+    <% end %>
+  </ul>
+
 </div>
 
+<footer>
+  Ben Eills, 2013
+</footer>
