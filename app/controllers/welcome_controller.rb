@@ -3,6 +3,6 @@ class WelcomeController < ApplicationController
   end
 
   def index
-    @users = User.all
+    @recent = TopEntry.last(10)
   end
 end

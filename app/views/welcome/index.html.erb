@@ -18,9 +18,13 @@
     </form>
     </li>
 
-    <% @users.sort { |x, y| x.username <=> y.username }.each do |u| %>
-    <li><%= link_to "@#{u.username}", "/#{CGI.escape u.username}" %></li> <!-- TODO -->
+
+    <% @recent.each do |e| %>
+      <li>
+	<%= link_to "@#{e.user.username}'s", "/#{CGI.escape e.user.username}" %> 
+	<%= "##{e.place} favorite #{e.category} is #{e.text}" %></li>
     <% end %>
+    
   </ul>
 
 </div>
