@@ -2,16 +2,33 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+
 @import "globals.css.scss";
 
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: "Source Sans Pro";
+}
+
 header {
-    background-color: $blue;
-    text-align: center;
+    text-align: right;
+}
+
+header #logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 footer {
-    background-color: $blue;
     text-align: center;
+    position: absolute;
+    bottom:0;
+    width: 100%;
 }
 
 
@@ -34,11 +51,18 @@ header > h1 {
     list-style: none;
 }
 
-#recent-list li { background-color: green; }
-#recent-list li:nth-child(odd) { background: red; }
-
 #recent-list li {
-    height: 28px;
+    font-size: 1.2em;
+    padding: 8px;
+    overflow: hidden;
+}
+
+#recent-list li { background-color: $rowEven;}
+#recent-list li:nth-child(odd) { background: $rowOdd; }
+
+#recent-list .username {
+    display: inline-block;
+    width: 15em;
 }
 
 // Tweet input

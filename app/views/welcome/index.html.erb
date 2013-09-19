@@ -1,10 +1,9 @@
 <header>
-  <h1>HashCatch</h1>
+  <%= image_tag("logo-500.png", :alt => "HashCatch", :id => "logo") %>
   <%= link_to "About", controller: "welcome", action: "about" %>
 </header>
 
-
-
+<hr />
 
 <div id="index-body">
   <ul id="recent-list">
@@ -21,8 +20,22 @@
 
     <% @recent.each do |e| %>
       <li>
-	<%= link_to "@#{e.user.username}'s", "/#{CGI.escape e.user.username}" %> 
-	<%= "##{e.place} favorite #{e.category} is #{e.text}" %></li>
+	<span class="username">
+	  <%= link_to "@#{e.user.username}", "/#{CGI.escape e.user.username}" %>
+	</span>
+	my
+	<strong>
+	  <%= "##{e.place}" %>
+	</strong>
+	favorite
+	<strong>
+	  <%= "#{e.category}" %>
+	</strong>
+	is
+	<strong>
+	  <%= "#{e.text}" %>
+	</strong>
+
     <% end %>
     
   </ul>
