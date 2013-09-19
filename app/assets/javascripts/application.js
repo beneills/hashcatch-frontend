@@ -14,3 +14,14 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$( document ).ready( function () {
+    $( "#arrow" ).click(function() {
+	$( "#arrow" ).fadeOut(300, function(){
+		$( "#arrow" ).slideUp("slow");});
+
+	$( "#help" ).slideDown( "medium", function() {
+	    // Animation complete.
+	});
+    });
+});
