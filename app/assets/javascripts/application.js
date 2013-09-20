@@ -16,12 +16,47 @@
 //= require_tree .
 
 $( document ).ready( function () {
-    $( "#arrow" ).click(function() {
-	$( "#arrow" ).fadeOut(300, function(){
-		$( "#arrow" ).slideUp("slow");});
+//    $( "#tweet-body" ).keypress(function() {
+    $( "#tweet-button" ).click(function() {
+	var tweet = $( "#tweet-body" ).val();
+	var link = $( "#tweet-button" ).parent();
+	var url = link.attr('href');
+	// TODO hack
+	url = url.replace(/&text=.*$/, "&text=" + encodeURIComponent(tweet));
+	link.attr('href', url);
+    });
 
-	$( "#help" ).slideDown( "medium", function() {
-	    // Animation complete.
-	});
+    $( "#arrow" ).click(function() {
+	// http://stackoverflow.com/questions/5003220/javascript-jquery-animate-to-auto-height
+	var help = $('#help'),
+	helpHeight = help.height();
+	help.css('min-height', helpHeight);
+
+	var text = $('#help-text'),
+	textHeight = text.height();
+	autoHeight = text.css('height', 'auto').height();
+	text.height(textHeight).animate({height: autoHeight}, 600);
+
+	$( "#arrow" ).hide();
+
+	$( ".twitter-hashtag-button a" ).remove();
+//fadeOut();
+ // slideUp(500, function() {
+ // 	    help.css('height', 'auto');
+ // 	});
+	
+	//, function(){
+//	$( "#arrow" )
+
+	// $( "#help" ).slideDown( "medium", function() {
+	//     // Animation complete.
+	// });
+    });
+
+
+
+    $( "#help-dismiss" ).click(function() {
+	$('#help-text').animate({height: "10px"}, 600);
+	$( "#arrow" ).show();
     });
 });
