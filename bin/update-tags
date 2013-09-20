@@ -1,0 +1,3 @@
+#!/bin/sh
+
+find app vendor lib test -name "*?.*" -print | etags -                            
