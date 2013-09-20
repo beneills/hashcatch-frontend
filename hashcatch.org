@@ -1,0 +1,41 @@
+* Top3
+** from/via twitter
+** Celebrities
+** Seeded via desert island discs, ...
+** confirmation of identity via twitter
+** syntax
+*** e.g.
+#1 album Thriller
+*** regex
+(my)*
+ +
+#(1|2|3)
+ +
+(album|cd|book|film|movie)
+ +
+(is)*
+ +
+(.+)
+** TODO unique username, etc.
+** design
+*** Goldilocks
+** names
+*** hashcache
+used by Princeton
+taken on twitter
+*** hashstack
+*** hashtrap
+no uses
+OK
+domain taken
+*** hashcatch
+good!
+*** hashcatcher
+*** twentry
+*** hashrank
+*** uphash
+*** hashbeat
+*** hashbin
+*** twinkling
+*** tweetbug
+*** uptweet
