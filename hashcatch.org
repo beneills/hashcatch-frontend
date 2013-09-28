@@ -39,3 +39,5 @@ good!
 *** twinkling
 *** tweetbug
 *** uptweet
+
+** add application HOWTO
