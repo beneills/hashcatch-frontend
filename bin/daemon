@@ -1,0 +1,3 @@
+#!/bin/sh
+
+rails runner ../daemon/bin/daemon $@
