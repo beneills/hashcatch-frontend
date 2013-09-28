@@ -50,3 +50,7 @@ gem 'purecss'
 
 # PostgreSQL
 gem 'pg'
+
+# for Daemon
+gem 'trollop'
+gem 'tweetstream'
