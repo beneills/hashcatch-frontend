@@ -16,6 +16,7 @@ body {
 
 header {
     text-align: right;
+    margin-bottom: 3em;
 }
 
 header #logo {
@@ -47,7 +48,7 @@ header > h1 {
 #help-text {
 //    display: none;
    overflow: hidden;
-    height: 10px;
+//    height: 10px;
     background-color: $helpColor;
     width: 70%;
     margin-left: auto;
@@ -55,12 +56,14 @@ header > h1 {
 //    box-shadow: inset rgba(255,255,255,1) 0px -10px 10px;
     box-shadow: 0px 5px 5px $helpColor;
     margin-bottom: 5px;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
+//    border-bottom-right-radius: 5px;
+ //   border-bottom-left-radius: 5px;
+    border-radius: 10px;
 }
 
 #help-text-inner {
     margin: 10px;
+    border-radius: 50px;
 }
 
 #test {
@@ -71,6 +74,7 @@ header > h1 {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    display: none;
 };
 
 #index-body {
