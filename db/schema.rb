@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130916144402) do
+ActiveRecord::Schema.define(version: 20130929111957) do
 
   create_table "top_entries", force: true do |t|
     t.integer  "place"
@@ -29,6 +29,12 @@ ActiveRecord::Schema.define(version: 20130916144402) do
     t.text     "username"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
+    t.string   "description"
+    t.string   "location"
+    t.boolean  "verified"
+    t.string   "profile_image_url"
+    t.string   "twitter_user_id"
   end
 
 end

@@ -1,3 +1,8 @@
+require 'ostruct' # TODO
+
+class Application < OpenStruct
+end
+
 class UsersController < ApplicationController
   def notfound
   end
@@ -5,15 +10,16 @@ class UsersController < ApplicationController
   def view
     @user = User.find_by_username(params[:username])
     if !@user.nil?
-      null_entry = TopEntry.new(text: "-")
+      @applications = []
 
-      @categories = Hash.new { |h, k| h[k] = Hash.new(null_entry)} # 'books' => { 1 => 'Bible' }
-
-      puts @user.methods
-
+      # Top
+      top = Application.new(name: 'Top')
+      # @categories = {'books' => { 1 => 'Bible' }}
+      top.categories = Hash.new { |h, k| h[k] = Hash.new(TopEntry.null)} 
       @user.top_entries.all.each do |e|
-        @categories[e.category][e.place] = e
+        top.categories[e.category][e.place] = e
       end
+      @applications.push(top)
     else
       render 'notfound'
     end

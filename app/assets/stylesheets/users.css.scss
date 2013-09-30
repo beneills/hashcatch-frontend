@@ -2,6 +2,54 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-h1#username {
+
+// User Profile
+#user-profile {
+//    top: 0;
+}
+
+#profile-image {
+    float: left;
+}
+
+#names {
+    float: left;
+    margin-left: 1em;
+}
+
+#fullname {
+    display: block;
+    font-size: 2.5em;
+}
+
+#username {
+    display: block;
 
 }
+
+
+
+
+#applications {
+    margin-top: 1.5em;
+    margin-bottom: 2em;
+}
+
+
+.application {
+    display: inline-block; // shrink
+
+    float: left;
+
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+    padding: 1em;
+
+    background-color: #EEEEFF;
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: #CCC;
+    border-radius: 7px;
+}
+
