@@ -15,4 +15,10 @@
  *= require purecss
  */
 
+a {
+    color: #0084B4;
+}
 
+a:visited {
+    color: #0084B4;
+}

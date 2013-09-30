@@ -127,10 +127,10 @@ header > h1 {
 
 
 footer {
-    text-align: center;
-    position: absolute;
-    bottom:0;
-    width: 100%;
+//    text-align: center;
+//    position: absolute;
+//    bottom:0;
+//    width: 100%;
 }
 
 
@@ -162,4 +162,21 @@ footer {
 #help-dismiss {
     cursor: pointer;
     float: right;
+}
+
+
+#top-example-tweet {
+//    display: inline-block;
+//    margin-left: auto;
+//    margin-right: auto;
+}
+
+#top-example {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+//    display: inline-block;
+//    margin-left: auto;
+//    margin-right: auto;
 }
