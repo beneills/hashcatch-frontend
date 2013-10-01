@@ -6,83 +6,42 @@
 
 @import "globals.css.scss";
 
-html, body {
-    height: 100%;
-}
-
-body {
-    font-family: "Source Sans Pro";
-}
-
-header {
-    text-align: right;
-    margin-bottom: 3em;
-}
-
-header #logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-
-header > h1 {
-    $margin-y: 0.1em;
-    display: inline-block;
-    font-size: 5em;
-    margin: {
-	top: $margin-y;
-	bottom: $margin-y;
-    }
-}
-
-#header-break {
-    margin-bottom: 0;
-}
-
+/* help */
 #help {
     overflow: hidden;
-}
-
-#help-text {
-//    display: none;
-   overflow: hidden;
-//    height: 10px;
     background-color: $helpColor;
-    width: 70%;
+    min-width: 520px;
     margin-left: auto;
     margin-right: auto;
-//    box-shadow: inset rgba(255,255,255,1) 0px -10px 10px;
+    padding: 15px;
     box-shadow: 0px 5px 5px $helpColor;
     margin-bottom: 5px;
-//    border-bottom-right-radius: 5px;
- //   border-bottom-left-radius: 5px;
     border-radius: 10px;
 }
 
-#help-text-inner {
-    margin: 10px;
-    border-radius: 50px;
+#help h3 {
+    font-size: 1.5em;
 }
 
-#test {
-    display: inline-block;
+#help-dismiss {
+    cursor: pointer;
 }
 
-#arrow {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+#help-show {
     display: none;
-};
+    cursor: pointer;
+}
 
-#index-body {
-    margin: 1em;
+
+// Recent Posts
+#recent {
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 #recent-list {
     list-style: none;
+    padding: 0;
 }
 
 #recent-list li {
@@ -97,7 +56,11 @@ header > h1 {
 
 #recent-list .username {
     display: inline-block;
-    width: 15em;
+}
+
+#recent-list .tweet {
+    display: inline-block;
+    float: right;
 }
 
 // Tweet input
@@ -117,6 +80,13 @@ header > h1 {
     display: table-cell;
     width: 100%;
 }
+
+
+#test {
+//    display: inline-block;
+}
+
+
 #test {
     display: table-cell;
     width: 148px;
@@ -125,39 +95,6 @@ header > h1 {
     float: right;
 }
 
-
-footer {
-//    text-align: center;
-//    position: absolute;
-//    bottom:0;
-//    width: 100%;
-}
-
-
-#footer-right {
-    position: absolute;
-    right: 0;
-}
-
-#footer-centre {
-    text-align: center;
-    position: relative
-}
-
-.content {
-    display: block;
-}
-
-.noDown {
-    display: block;
-}
-
-#container {
-    width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-
-}
 
 #help-dismiss {
     cursor: pointer;

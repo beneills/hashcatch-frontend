@@ -1,33 +1,26 @@
-
 <div id="help">
-  <div id="help-text">
-  <div id="help-text-inner">
-    <h4 id="help-tagline">
-      <em>HashCatch lets you control stuff through your regular tweets</em>
-    </h4>
+  <h3>
+    <em>HashCatch lets you control stuff through your regular tweets</em>
+  </h3>
 
-    For example, you tweet this:
+  For example, you tweet this:
 
-    <span id="top-example-tweet">
-      <blockquote class="twitter-tweet"><p>#2 book is Huckleberry Finn <a href="https://twitter.com/search?q=%23HashCatch&amp;src=hash">#HashCatch</a></p>&mdash; Ben Eills (@beneills) <a href="https://twitter.com/beneills/statuses/381105085213716480">September 20, 2013</a></blockquote>
-      <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-    </span>
-
-    and HashCatch understands you:
-
-    <%= image_tag("top-example.png", :alt => "Example Output", :id => "top-example") %>
-
-
-Try it now!
-
-<button id="help-dismiss">Dismiss</button>
-  </div>
-  </div>
-  <!-- <%= image_tag("arrow.png", :alt => "How do I HashCatch?", :id => "arrow") %> -->
-  <button id="arrow">show</button>
+  <span id="top-example-tweet">
+    <blockquote class="twitter-tweet"><p>#2 book is Huckleberry Finn <a href="https://twitter.com/search?q=%23HashCatch&amp;src=hash">#HashCatch</a></p>&mdash; Ben Eills (@beneills) <a href="https://twitter.com/beneills/statuses/381105085213716480">September 20, 2013</a></blockquote>
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </span>
+  
+  and HashCatch understands you:
+  
+  <%= image_tag("top-example.png", :alt => "Example Output", :id => "top-example") %>
+  
+  
+  Try it now!
+  <a id="help-dismiss">Dismiss</a>
 </div>
+<a id="help-show">Show Help</a>
 
-<div id="index-body">
+<div id="recent">
   <ul id="recent-list">
     <li>
     <form class="pure-form">
@@ -53,19 +46,21 @@ Try it now!
 	<span class="username">
 	  <%= link_to "@#{e.user.username}", "/#{CGI.escape e.user.username}" %>
 	</span>
-	my
-	<strong>
-	  <%= "##{e.place}" %>
-	</strong>
-	favorite
-	<strong>
-	  <%= "#{e.category}" %>
-	</strong>
-	is
-	<strong>
-	  <%= "#{e.text}" %>
-	</strong>
 
+	<span class="tweet">
+	  my
+	  <strong>
+	    <%= "##{e.place}" %>
+	  </strong>
+	  favorite
+	  <strong>
+	    <%= "#{e.category}" %>
+	  </strong>
+	  is
+	  <strong>
+	    <%= "#{e.text}" %>
+	  </strong>
+	</span>
     <% end %>
     
   </ul>

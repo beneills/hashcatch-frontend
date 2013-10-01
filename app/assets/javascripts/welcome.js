@@ -1,0 +1,35 @@
+// Place all the behaviors and hooks related to the matching controller here.
+// All this logic will automatically be available in application.js.
+// You can use CoffeeScript in this file: http://coffeescript.org/
+
+$( document ).ready( function () {
+//    $( "#tweet-body" ).keypress(function() {
+    $( "#tweet-button" ).click(function() {
+	var tweet = $( "#tweet-body" ).val();
+	var link = $( "#tweet-button" ).parent();
+	var url = link.attr('href');
+	// TODO hack
+	url = url.replace(/&text=.*$/, "&text=" + encodeURIComponent(tweet));
+	link.attr('href', url);
+    });
+
+    $( "#help-show" ).click(function() {
+	// http://stackoverflow.com/questions/5003220/javascript-jquery-animate-to-auto-height
+	var help = $('#help'),
+	helpHeight = help.height();
+	$('#help').fadeIn("fast");
+	help.css('height', 'auto')
+	
+	$( "#help-show" ).hide();
+    });
+
+
+
+    $( "#help-dismiss" ).click(function() {
+	$('#help').animate({height: "10px"}, 600, function () {
+	    $('#help').fadeOut("fast", function (){
+		$( "#help-show" ).fadeIn();
+	    })
+	});
+    });
+});

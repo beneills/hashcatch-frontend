@@ -1,31 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Site</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>HashCatch</title>
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+  </head>
 
-<header>
-  <%= link_to( image_tag("logo-300.png", :alt => "HashCatch", :id => "logo"), "/") %>
-</header>
+  <body>
+    <header>
+      <%= link_to( image_tag("logo-300.png", :alt => "HashCatch", :id => "logo"), "/") %>
+    </header>
 
-<!-- <hr id="header-break" /> -->
+    <div id="container">
+      <%= yield %>
 
-<div id="container">
-  <%= yield %>
-
-
-</div>
-
-  <footer>
-    <div id="footer-centre">
-      <div id="footer-right"><%= link_to "About", controller: "welcome", action: "about" %></div>
-      Ben Eills, 2013
+      <footer>
+	<!-- <div id="footer-centre"> -->
+	<!--   <div id="footer-right"><%= link_to "About", controller: "welcome", action: "about" %></div> -->
+	<!--   Ben Eills, 2013 -->
+	<!-- </div> -->
+	Ben Eills, 2013
+	<span id="about-link"><%= link_to "About", controller: "welcome", action: "about" %></span>
+      </footer>
     </div>
-  </footer>
-
-</body>
+  </body>
 </html>
