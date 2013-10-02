@@ -55,6 +55,13 @@
 #recent-list li { background-color: $rowEven;}
 #recent-list li:nth-child(odd) { background: $rowOdd; }
 
+#recent-list .profile_image {
+    display: block;
+    float: left;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+
 #recent-list .username {
     display: inline-block;
 }
@@ -62,6 +69,12 @@
 #recent-list .tweet {
     display: inline-block;
     float: right;
+
+    color: #333;
+}
+
+#recent-list .tweet .regexp_match {
+    color: black;
 }
 
 // Tweet input
@@ -75,6 +88,7 @@
 #tweet-body-expander {
     display:table;
     width: 100%;
+    margin-bottom: -5px; // TODO - hack
 }
 
 #tweet-body {

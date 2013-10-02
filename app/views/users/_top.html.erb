@@ -1,0 +1,22 @@
+<span class="application">
+  <span class="application-title">Top</span>
+  <div style="clear:both;"></div> <!-- TODO http://stackoverflow.com/questions/6681768/how-to-not-use-div-class-clear-in-markup -->
+  <% app.categories.each do |title, entries| %>
+  <span class="subapplication">
+    <span class="subapplication-title"><%= title.pluralize.capitalize %></span>
+    <ol>
+      <% 1.upto(3) do |i| %>
+      <%= entry = entries[i] %>
+      <li>
+        <% if entry.link && !entry.link.empty? %>
+        <a href="<%= entry.link %>"><%= entry.text %></a>
+	  <% else %>
+	  <%= entry.text %>
+	  <% end %>
+      </li>
+      <% end %>
+    </ol>
+  </span>
+  <% end %>
+  <div style="clear:both;"></div> <!-- TODO http://stackoverflow.com/questions/6681768/how-to-not-use-div-class-clear-in-markup -->
+</span>

@@ -46,23 +46,31 @@
 
     <% @recent.each do |e| %>
       <li>
+	<% url = e.user.profile_image_url; if url %>
+	
+	<img class="profile_image" src="<%= url.sub('_bigger.', '_mini.') %>" />
+
+	<% end %>
+
 	<span class="username">
 	  <%= link_to "@#{e.user.username}", "/#{CGI.escape e.user.username}" %>
 	</span>
 
+
 	<span class="tweet">
-	  my
-	  <strong>
-	    <%= "##{e.place}" %>
-	  </strong>
-	  favorite
-	  <strong>
-	    <%= "#{e.category}" %>
-	  </strong>
-	  is
-	  <strong>
-	    <%= "#{e.text}" %>
-	  </strong>
+	  <%== e.tweet %>
+	  <!-- my -->
+	  <!-- <strong> -->
+	  <!--   <%= "##{e.place}" %> -->
+	  <!-- </strong> -->
+	  <!-- favorite -->
+	  <!-- <strong> -->
+	  <!--   <%= "#{e.category}" %> -->
+	  <!-- </strong> -->
+	  <!-- is -->
+	  <!-- <strong> -->
+	  <!--   <%= "#{e.text}" %> -->
+	  <!-- </strong> -->
 	</span>
     <% end %>
     

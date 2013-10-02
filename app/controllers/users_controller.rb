@@ -8,7 +8,8 @@ class UsersController < ApplicationController
   end
 
   def view
-    @user = User.find_by_username(params[:username])
+    username = params[:username]
+    @user = User.find_by_username(username)
     if !@user.nil?
       @applications = []
 
@@ -21,7 +22,7 @@ class UsersController < ApplicationController
       end
       @applications.push(top)
     else
-      render 'notfound'
+      render 'notfound', locals: {username: username, twitter_profile_url: "https://twitter.com/#{username}"}
     end
   end
 end

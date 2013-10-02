@@ -1,3 +1,5 @@
-<h3>User not found!</h3>
+<h3 id="notfound-tagline">We haven't detected any tweets from <a href="<%= twitter_profile_url %>"><%= "@#{username}" %></a>.  Check out some recent #hashcatch users.</h3>
 
-<a href="/">back</a>
+  <a class="twitter-timeline" width="500px" height="400px" data-dnt="true" href="https://twitter.com/search?q=%23hashcatch" data-widget-id="385423218879655936"></a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
