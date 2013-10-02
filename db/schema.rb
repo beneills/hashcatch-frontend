@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130929111957) do
+ActiveRecord::Schema.define(version: 20131002143505) do
 
   create_table "top_entries", force: true do |t|
     t.integer  "place"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20130929111957) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "tweet"
   end
 
   add_index "top_entries", ["user_id"], name: "index_top_entries_on_user_id"
@@ -29,11 +30,11 @@ ActiveRecord::Schema.define(version: 20130929111957) do
     t.text     "username"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "name"
-    t.string   "description"
-    t.string   "location"
-    t.boolean  "verified"
-    t.string   "profile_image_url"
+    t.text     "name"
+    t.text     "description"
+    t.text     "location"
+    t.text     "verified"
+    t.text     "profile_image_url"
     t.string   "twitter_user_id"
   end
 
