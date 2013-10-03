@@ -4,6 +4,7 @@
 
 $( document ).ready( function () {
     if (!$.cookie('hide_help') || $.cookie('hide_help') == "false") {
+	$( "#help-show" ).hide();
 	$( '#help' ).show();
     } else {
 	$( "#help-show" ).show();
