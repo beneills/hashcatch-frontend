@@ -52,7 +52,10 @@
 }
 
 #recent-list li { background-color: $rowEven;}
-#recent-list li:nth-child(odd) { background: $rowOdd; }
+#recent-list li:nth-child(odd) {
+    background: $rowOdd;
+    border: 1px solid $grey1;
+}
 
 #recent-list .profile_image {
     display: block;
@@ -69,11 +72,11 @@
     display: inline-block;
     float: right;
 
-    color: #333;
+    color: $tweetColor;
 }
 
 #recent-list .tweet .regexp_match {
-    color: black;
+    color: $tweetMatchColor;
 }
 
 // Tweet input
@@ -81,7 +84,6 @@
     float: left;
     height: 28px; // match tweet button
     width: 50%;
-//    border-bottom-color: #1ab7ea; fade to twitter color TODO
 }
 
 #tweet-body-expander {

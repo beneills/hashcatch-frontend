@@ -1,4 +1,33 @@
-$rowOdd: #A8BDFF;
-$rowEven: #FFF;
+/* Color Definitions */
+$color1: #6E86D6;
+$color2: #A8BDFF;
+$color3: black;
+$color4: black;
 
-$helpColor: #8ec1da;
+$textColor: #111;
+
+$grey1: #CCC;
+$grey2: #EEEEFF;
+$grey3: #DDDDFF;
+
+$linkColor: #0084B4;
+
+/* Color Assignments */
+$rowOdd: $grey2;
+$rowEven: white;
+
+$headerColor: $color2;
+$footerColor: $headerColor;
+
+$helpColor: $grey3;
+
+$tweetColor: $textColor;
+$tweetMatchColor: black;
+
+
+
+$applicationBackgroundColor: $grey2;
+$applicationBorderColor: $grey1;
+
+$subApplicationBackgroundColor: $grey3;
+$subApplicationBorderColor: $grey1;
