@@ -33,15 +33,21 @@
 }
 
 
-// Recent Posts
-#recent {
+#welcome-content {
     margin-top: 1em;
     margin-bottom: 1em;
+}
+
+// recent Posts
+#recent {
+    float: left;
+    width: 600px;
 }
 
 #recent-list {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 #recent-list li {
@@ -57,6 +63,12 @@
     border: 1px solid $grey1;
 }
 
+#recent-list .user {
+    display: block;
+    min-width: 10em;
+    float: left;
+}
+
 #recent-list .profile_image {
     display: block;
     float: left;
@@ -70,13 +82,24 @@
 
 #recent-list .tweet {
     display: inline-block;
-    float: right;
+//    float: right;
 
     color: $tweetColor;
 }
 
 #recent-list .tweet .regexp_match {
     color: $tweetMatchColor;
+}
+
+// Right
+#right {
+    background-color: $rowOdd;
+    float: right;
+    width:350px;
+    padding: 8px;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1px solid $grey1;
 }
 
 // Tweet input

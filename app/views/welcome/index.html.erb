@@ -23,39 +23,39 @@
 </div>
 <a id="help-show">Show Help</a>
 
-<div id="recent">
-  <ul id="recent-list">
-    <li>
-    <form class="pure-form">
-      <div id="tweet-body-expander">
-	  <input id="tweet-body" type="text" placeholder="My #1 book is To Kill a Mockingbird">
-      <div id="test">
-	<a href="https://twitter.com/intent/tweet?button_hashtag=HashCatch&text=hello%20world" target="_blank">
-	  <%= image_tag("tweet-button.png", :alt => "Tweet #HashCatch", :id => "tweet-button") %>
-	</a>
-
-	<!-- <a href="https://twitter.com/intent/tweet?button_hashtag=hashcatch&text=My%20%231%20book%20is%20To%20Kill%20a%20Mockingbird" class="twitter-hashtag-button" data-size="large" data-related="hashcatch" data-url="http://hashcatch.com">Tweet #hashcatch</a> -->
-	<!-- <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script> -->
-      </div>
-      
-
-      </div>
-    </form>
-    </li>
-
-
-    <% @recent.each do |e| %>
+<div id="welcome-content">
+  <div id="recent">
+    <ul id="recent-list">
       <li>
-	<% url = e.user.profile_image_url; if url %>
-	
-	<img class="profile_image" src="<%= url.sub('_bigger.', '_mini.') %>" />
+	<form class="pure-form">
+	  <div id="tweet-body-expander">
+	    <input id="tweet-body" type="text" placeholder="My #1 book is To Kill a Mockingbird">
+	    <div id="test">
+	      <a href="https://twitter.com/intent/tweet?button_hashtag=HashCatch&text=hello%20world" target="_blank">
+		<%= image_tag("tweet-button.png", :alt => "Tweet #HashCatch", :id => "tweet-button") %>
+	      </a>
 
-	<% end %>
+	      <!-- <a href="https://twitter.com/intent/tweet?button_hashtag=hashcatch&text=My%20%231%20book%20is%20To%20Kill%20a%20Mockingbird" class="twitter-hashtag-button" data-size="large" data-related="hashcatch" data-url="http://hashcatch.com">Tweet #hashcatch</a> -->
+	      <!-- <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script> -->
+	    </div>
+	    
 
-	<span class="username">
-	  <%= link_to "@#{e.user.username}", "/#{CGI.escape e.user.username}" %>
+	  </div>
+	</form>
+      </li>
+
+
+      <% @recent.each do |e| %>
+      <li>
+	<span class="user">
+	  <% url = e.user.profile_image_url; if url %>	
+       	  <img class="profile_image" src="<%= url.sub('_bigger.', '_mini.') %>" />
+	  <% end %>
+
+	  <span class="username">
+	    <%= link_to "@#{e.user.username}", "/#{CGI.escape e.user.username}" %>
+	  </span>
 	</span>
-
 
 	<span class="tweet">
 	  <%== e.tweet %>
@@ -72,9 +72,15 @@
 	  <!--   <%= "#{e.text}" %> -->
 	  <!-- </strong> -->
 	</span>
-    <% end %>
-    
-  </ul>
+	<% end %>
+	
+    </ul>
 
+  </div>
+
+  <div id="right">
+    <%= render partial: "right", locals: {} %>
+  </div>
+
+  <div style="clear:both;"></div> <!-- TODO http://stackoverflow.com/questions/6681768/how-to-not-use-div-class-clear-in-markup -->
 </div>
-
