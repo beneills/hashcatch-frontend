@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131002143505) do
+ActiveRecord::Schema.define(version: 20131005141633) do
 
   create_table "top_entries", force: true do |t|
     t.integer  "place"
@@ -22,6 +22,12 @@ ActiveRecord::Schema.define(version: 20131002143505) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "tweet"
+    t.text     "amazon_asin"
+    t.text     "amazon_title"
+    t.text     "amazon_author"
+    t.text     "amazon_small_image"
+    t.text     "amazon_medium_image"
+    t.text     "amazon_associate_url"
   end
 
   add_index "top_entries", ["user_id"], name: "index_top_entries_on_user_id"
