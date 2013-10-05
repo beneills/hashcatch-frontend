@@ -54,3 +54,7 @@ gem 'pg'
 # for Daemon
 gem 'trollop'
 gem 'tweetstream'
+
+# for tools
+gem 'amazon-ecs'
+gem 'highline'
