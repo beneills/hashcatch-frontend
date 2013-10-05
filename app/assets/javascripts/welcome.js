@@ -2,7 +2,13 @@
 // All this logic will automatically be available in application.js.
 // You can use CoffeeScript in this file: http://coffeescript.org/
 
-$( document ).ready( function () {
+
+// TODO change to use turbolinks properly
+document.addEventListener("page:change", onChange); // every link click
+$( document ).ready( onChange ); // on first land
+
+
+function onChange() {
     if (!$.cookie('hide_help') || $.cookie('hide_help') == "false") {
 	$( "#help-show" ).hide();
 	$( '#help' ).show();
@@ -49,4 +55,4 @@ $( document ).ready( function () {
     // 	    console.log("hit");
     // 	}
     // });
-});
+}
