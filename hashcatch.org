@@ -41,3 +41,27 @@ good!
 *** uptweet
 
 ** add application HOWTO
+
+** Plan
+*** DONE DB Amazon ID, product image
+*** DONE Script to update info
+*** TODO Right box
+*** TODO Colours
+*** TODO Logo
+*** TODO finish styling
+
+*** TODO commit to master
+
+*** TODO test daemon
+*** TODO another app idea
+*** TODO 2nd app for HC
+*** TODO plan for seeding
+
+
+*** TODO Better Amazon Password
+*** TODO Use @hashcatch credentials
+*** TODO Full beta test
+
+*** TODO Clean Database
+*** TODO Seed Data
+*** TODO Launch
