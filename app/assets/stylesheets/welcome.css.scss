@@ -102,6 +102,12 @@
     border: 1px solid $grey1;
 }
 
+#right img {
+    background-color: white;
+    padding: 3px;
+    border: 1px solid $grey1;
+}
+
 // Tweet input
 #tweet-body {
     float: left;

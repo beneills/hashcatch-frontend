@@ -1,11 +1,13 @@
-<h4 style="margin-top:0;">Popular Albums</h4>
+<h4 style="margin-top:0;">Popular</h4>
 
 <div style="margin-left: auto; margin-right:auto;">
-  <%= link_to( image_tag("covers/1.png", :alt => "Cover", :id => "cover"), "#") %>
-  <%= link_to( image_tag("covers/2.png", :alt => "Cover", :id => "cover"), "#") %>
-  <%= link_to( image_tag("covers/3.png", :alt => "Cover", :id => "cover"), "#") %>
-  <%= link_to( image_tag("covers/4.png", :alt => "Cover", :id => "cover"), "#") %>
-  <%= link_to( image_tag("covers/5.png", :alt => "Cover", :id => "cover"), "#") %>
-  <%= link_to( image_tag("covers/6.png", :alt => "Cover", :id => "cover"), "#") %>
+        <% @right.each do |entry| %>
+
+	<%= link_to( image_tag( entry.amazon_medium_image, :alt => "TODO", :id => "TODO"), "/#{entry.user.username}") %>
+
+        <% end %>
+
+  <!-- link_to( image_tag("covers/1.png", :alt => "Cover", :id => "cover"), "#") -->
+
   <div style="clear:both;"></div> <!-- TODO http://stackoverflow.com/questions/6681768/how-to-not-use-div-class-clear-in-markup -->
 </div>

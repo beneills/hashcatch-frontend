@@ -8,6 +8,10 @@
       <% 1.upto(3) do |i| %>
       <%= entry = entries[i] %>
       <li>
+        <% if entry.amazon_small_image %>
+            <img src="<%= entry.amazon_small_image %>" />
+        <% end %>
+
         <% if entry.link && !entry.link.empty? %>
         <a href="<%= entry.link %>"><%= entry.text %></a>
 	  <% else %>
