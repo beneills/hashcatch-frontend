@@ -53,8 +53,34 @@
 
 .application-title {
     display: block;
+    float: left;
     font-size: 1.5em;
     margin-bottom: 0.7em;
+    cursor: pointer;
+}
+
+.application-title sup {
+    color: $linkColor;
+    font-size: 60%;
+}
+
+.application-help {
+    display: block; // default hidden
+    float: left;
+
+    margin-left: 10px;
+
+    font-style: italic;
+}
+
+.application-help > code {
+    margin-left: 1em;
+    background-color: white;
+    padding: 2px;
+    border: 1px solid $grey1;
+
+    font-size: 70%;
+    
 }
 
 .subapplication {

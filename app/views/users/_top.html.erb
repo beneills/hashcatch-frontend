@@ -1,5 +1,15 @@
 <span class="application">
-  <span class="application-title">Top</span>
+  <div class="application-head">
+    <span class="application-title">Top<sup>?</sup></span>
+    <span class="application-help">
+      save your top books, albums and movies:
+
+      <code>
+	[my] no|# 1|2|3 [favorite] album|cd|book|film|movie [is] &lt;name&gt;
+      </code>
+    </span>
+  </div>
+
   <div style="clear:both;"></div> <!-- TODO http://stackoverflow.com/questions/6681768/how-to-not-use-div-class-clear-in-markup -->
   <% app.categories.each do |title, entries| %>
   <span class="subapplication">
