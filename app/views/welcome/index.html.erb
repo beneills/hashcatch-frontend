@@ -50,6 +50,8 @@
 	<span class="user">
 	  <% url = e.user.profile_image_url; if url %>	
        	  <img class="profile_image" src="<%= url.sub('_bigger.', '_mini.') %>" />
+	  <% else %>
+	  <span class="empty_profile_image">&nbsp;</span>
 	  <% end %>
 
 	  <span class="username">

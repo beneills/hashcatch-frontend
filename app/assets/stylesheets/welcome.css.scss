@@ -75,6 +75,12 @@
     border-radius: 3px;
 }
 
+#recent-list .empty_profile_image {
+    display: block;
+    float: left;
+    width: 34px;
+}
+
 #recent-list .username {
     display: inline-block;
 }
