@@ -1,6 +1,6 @@
-<h4 style="margin-top:0;">Popular</h4>
+<h4>Popular</h4>
 
-<div style="margin-left: auto; margin-right:auto;">
+<div id="images">
         <% @right.each do |entry| %>
 
 	<%= link_to( image_tag( entry.amazon_medium_image, :alt => "TODO", :id => "TODO"), "/#{entry.user.username}") %>

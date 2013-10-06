@@ -107,6 +107,16 @@
     border: 1px solid $grey1;
 }
 
+#right h4 {
+    margin-top: 0;
+}
+
+#right #images {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
 #right img {
     background-color: white;
     padding: 3px;
