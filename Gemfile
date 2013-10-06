@@ -58,3 +58,6 @@ gem 'tweetstream'
 # for tools
 gem 'amazon-ecs'
 gem 'highline'
+
+
+gem 'delayed_job_active_record'
