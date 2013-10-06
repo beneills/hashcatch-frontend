@@ -21,6 +21,11 @@ class UsersController < ApplicationController
         top.categories[e.category][e.place] = e
       end
       @applications.push(top)
+
+      # Cite
+      cite = Application.new(name: 'Cite')
+      cite.entries = @user.cite_entries.all
+      @applications.push(cite)
     else
       render 'notfound', locals: {username: username, twitter_profile_url: "https://twitter.com/#{username}"}
     end

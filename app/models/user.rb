@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :top_entries
+  has_many :cite_entries
 
   def self.higher_level_create(twitter_user)
     User.create(User.twitter_rails_mapping(twitter_user))

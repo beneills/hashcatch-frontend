@@ -1,0 +1,31 @@
+<span class="application">
+  <div class="application-head">
+    <span class="application-title">Cite<sup>?</sup></span>
+    <span class="application-help">
+      cite stuff TODO
+
+      <code>
+	TODO
+      </code>
+    </span>
+  </div>
+
+  <div style="clear:both;"></div> <!-- TODO http://stackoverflow.com/questions/6681768/how-to-not-use-div-class-clear-in-markup -->
+
+  <% if !app.entries.empty? %>
+    <% app.entries.each do |entry| %>
+      <li>
+	<a href="<%= entry.url %>"><%= entry.url %></a> -
+	<em><%= entry.note %></em> - 
+	<% if entry.archived? %>
+	  [<a href="<%= entry.archive_url %>">archived copy</a>]
+	<% else %>
+	  [not yet archived]
+	<% end %>
+      </li>
+    <% end %>
+  <% else %>
+    <em>no entries yet</em>
+  <% end %>
+
+</span>

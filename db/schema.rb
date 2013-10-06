@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131005143952) do
+ActiveRecord::Schema.define(version: 20131006164854) do
+
+  create_table "cite_entries", force: true do |t|
+    t.text     "url"
+    t.text     "archive_url"
+    t.text     "note"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "tweet"
+  end
+
+  add_index "cite_entries", ["user_id"], name: "index_cite_entries_on_user_id"
 
   create_table "top_entries", force: true do |t|
     t.integer  "place"
