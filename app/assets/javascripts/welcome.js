@@ -37,16 +37,23 @@ function onChange() {
 	$( "#help-show" ).hide();
     });
 
-
-
-    $( "#help-dismiss" ).click(function() {
+    function hide_help () {
 	$.cookie('hide_help', 'true', { expires: 365*100 });
 	$('#help').animate({height: "10px"}, 600, function () {
 	    $('#help').fadeOut("fast", function (){
 		$( "#help-show" ).fadeIn();
 	    })
 	});
+    }
+
+    $( "#help-dismiss" ).click(hide_help);
+
+    $( "#help-try-it-now" ).click(function() {
+	hide_help();
+	$("#tweet-body").focus();
     });
+
+
 
     // $(window).scroll(function() {
     // 	var height = $(window).scrollTop();
