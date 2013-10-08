@@ -1,8 +1,15 @@
 /* Color Definitions */
+
+$blue1: #7878E4;
+$green1: #2FC25E;
+
+$linkColor: #0084B4;
+
 $color1: #6E86D6;
 $color2: #A8BDFF;
 $color3: black;
 $color4: black;
+
 
 $textColor: #111;
 
@@ -10,16 +17,16 @@ $grey1: #CCC;
 $grey2: #EEEEFF;
 $grey3: #DDDDFF;
 
-$linkColor: #0084B4;
+
 
 /* Color Assignments */
 $rowOdd: $grey2;
 $rowEven: white;
 
-$headerColor: $color2;
+$headerColor: $green1;
 $footerColor: $headerColor;
 
-$helpColor: $grey3;
+$helpColor: $blue1;
 
 $tweetColor: $textColor;
 $tweetMatchColor: black;
