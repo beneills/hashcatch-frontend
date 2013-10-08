@@ -13,7 +13,7 @@
 	<%= link_to( image_tag("logo-300.png", :alt => "HashCatch", :id => "logo"), "/") %>
 
 	<span id="tagline">
-	  Semanticize your tweets.
+	  <%= random_tagline %>
 	</span>
 
 	<div style="clear:both;"></div> <!-- TODO http://stackoverflow.com/questions/6681768/how-to-not-use-div-class-clear-in-markup -->
@@ -30,7 +30,8 @@
 	<!--   <div id="footer-right"><%= link_to "About", controller: "welcome", action: "about" %></div> -->
 	<!--   Ben Eills, 2013 -->
 	<!-- </div> -->
-	Ben Eills, 2013
+	&copy; <%= copyright_notice_year_range(2013) %> <%= link_to "Ben Eills", "http://beneills.com" %>
+
 	<span id="about-link"><%= link_to "About", controller: "welcome", action: "about" %></span>
       </div>
     </footer>
