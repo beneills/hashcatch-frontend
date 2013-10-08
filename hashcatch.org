@@ -42,13 +42,42 @@ good!
 
 ** add application HOWTO
 
+    # Site
+    rails g model CiteEntry
+    emacs db/migrate/*_create_cite_entries.rb
+    rake db:migrate
+
+    emacs app/models/cite_entry.rb # belongs_to :user
+    emacs app/models/user.rb # has_many :cite_entries
+
+    emacs app/views/users/_cite.html.erb
+    emacs app/controllers/users_controller.rb # add Application instance to @applications
+
+    emacs app/controllers/welcome.rb # add application to applications, maybe right
+
+    # Daemon
+    emacs lib/applications/cite.rb
+
 ** Plan
 *** DONE DB Amazon ID, product image
 *** DONE Script to update info
-*** TODO Right box
-*** TODO Colours
+*** DONE Right box
+*** DONE Colours
 *** TODO Logo
 *** TODO finish styling
+*** TODO Help text
+*** TODO Help try now button
+*** TODO Help header margin
+*** TODO Top image alignment
+
+*** TODO footer name link
+*** TODO about page
+
+*** TODO Application help hover single
+*** TODO Cite styling
+*** TODO Welcome syntax highlighting
+*** TODO mailto
+*** TODO rgrep TODO
 
 *** TODO commit to master
 
