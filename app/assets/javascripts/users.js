@@ -5,10 +5,9 @@ function onLoad () {
     $( ".application-help" ).hide();
 
     $( ".application-title" ).hover(function() {
-	/* todo all apps */
-	$( ".application-help" ).fadeIn(100);
+	var help = $(this).parent().parent().find(".application-help");
+	help.fadeIn(100);
     }, function() {
-	/* todo all apps */
 	$( ".application-help" ).stop().fadeOut(300);
     });
 }
