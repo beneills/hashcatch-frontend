@@ -1,6 +1,9 @@
 class CiteEntry < ActiveRecord::Base
   belongs_to :user
 
+  @@url_regexp = "https?:\/\/[\\S]+" # TODO
+  @@regexp = /((cite)|(archive)) +(?<url>#{@@url_regexp})( +(?<note>[^#]+))?/i
+
   @@response_regexp = /(?<url>http:\/\/www.webcitation.org\/[^"]+)">\(Archived by WebCite/i
 
 
@@ -25,4 +28,19 @@ class CiteEntry < ActiveRecord::Base
       #logger.error("WebCite request unsuccessful")
     end
   end
+
+  def tweet
+    tweet = super
+    m = @@regexp.match(tweet)
+    if m
+      m.names.reverse.each do |n|
+        if m.end(n)
+          tweet.insert(m.end(n), "</span>")
+          tweet.insert(m.begin(n), "<span class=\"regexp_match\">")
+        end
+      end
+    end
+    tweet
+  end
+
 end
