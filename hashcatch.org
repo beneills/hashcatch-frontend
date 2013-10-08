@@ -64,20 +64,20 @@ good!
 *** DONE Right box
 *** DONE Colours
 *** TODO Logo
-*** TODO finish styling
-*** TODO Help text
-*** TODO Help try now button
-*** TODO Help header margin
-*** TODO Top image alignment
+*** DONE finish styling
+*** DONE Help text
+*** DONE Help try now button
+*** DONE Help header margin
+*** DONE Top image alignment
 
-*** TODO footer name link
-*** TODO about page
+*** DONE footer name link
+*** DONE about page
 
-*** TODO Application help hover single
-*** TODO Cite styling
-*** TODO Welcome syntax highlighting
-*** TODO mailto
-*** TODO rgrep TODO
+*** DONE Application help hover single
+*** DONE Cite styling
+*** DONE Welcome syntax highlighting
+*** DONE mailto
+*** DONE rgrep TODO
 
 *** TODO commit to master
 

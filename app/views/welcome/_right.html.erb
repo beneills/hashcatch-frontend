@@ -3,7 +3,7 @@
 <div id="images">
         <% @right.each do |entry| %>
 
-	<%= link_to( image_tag( entry.amazon_medium_image, :alt => "TODO", :id => "TODO"), "/#{entry.user.username}") %>
+	<%= link_to( image_tag( entry.amazon_medium_image, :alt => entry.text, :title => entry.text), "/#{entry.user.username}") %>
 
         <% end %>
 

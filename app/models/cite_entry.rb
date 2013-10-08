@@ -1,7 +1,7 @@
 class CiteEntry < ActiveRecord::Base
   belongs_to :user
 
-  @@url_regexp = "https?:\/\/[\\S]+" # TODO
+  @@url_regexp = "[\\S]+" # TODO "https?:\/\/[\\S]+" # TODO
   @@regexp = /((cite)|(archive)) +(?<url>#{@@url_regexp})( +(?<note>[^#]+))?/i
 
   @@response_regexp = /(?<url>http:\/\/www.webcitation.org\/[^"]+)">\(Archived by WebCite/i
