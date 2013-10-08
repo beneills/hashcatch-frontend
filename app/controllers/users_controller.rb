@@ -16,7 +16,7 @@ class UsersController < ApplicationController
       # Top
       top = Application.new(name: 'Top')
       # @categories = {'books' => { 1 => 'Bible' }}
-      top.categories = Hash.new { |h, k| h[k] = Hash.new(TopEntry.null)} 
+      top.categories = Hash.new { |h, k| h[k] = Hash.new} 
       @user.top_entries.all.each do |e|
         top.categories[e.category][e.place] = e
       end

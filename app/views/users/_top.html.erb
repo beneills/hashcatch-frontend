@@ -1,4 +1,4 @@
-<span class="application">
+<span id="top-application" class="application">
   <div class="application-head">
     <span class="application-title">Top<sup>?</sup></span>
     <span class="application-help">
@@ -14,22 +14,22 @@
   <% app.categories.each do |title, entries| %>
   <span class="subapplication">
     <span class="subapplication-title"><%= title.pluralize.capitalize %></span>
-    <ol>
-      <% 1.upto(3) do |i| %>
-      <%= entry = entries[i] %>
+    <ul>
+      <% entries.each do |place, entry| %>
       <li>
         <% if entry.amazon_small_image %>
             <img src="<%= entry.amazon_small_image %>" />
         <% end %>
 
+	<%= "##{place}" %> 
         <% if entry.link && !entry.link.empty? %>
         <a href="<%= entry.link %>"><%= entry.text %></a>
-	  <% else %>
-	  <%= entry.text %>
-	  <% end %>
+	<% else %>
+	<%= entry.text %>
+	<% end %>
       </li>
       <% end %>
-    </ol>
+    </ul>
   </span>
   <% end %>
   <div style="clear:both;"></div> <!-- TODO http://stackoverflow.com/questions/6681768/how-to-not-use-div-class-clear-in-markup -->
